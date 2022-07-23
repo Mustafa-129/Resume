@@ -4,198 +4,461 @@
 <head>
   <meta charset="utf-8">
   <title>Mustafa's Personal Site</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="Icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
 </head>
-
+<img class="otto1" src="data:image/png;base64,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" alt="">
+<img class="otto2" src="data:image/png;base64,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" alt="">
+<img class="flag" src="data:image/png;base64,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" alt="">
 <body>
-  <table cellspacing="20">
-    <tr>
-      <td><img src="Mustafa.png" width="200px" alt=""></td>
-      <td>  <p><h1>Muhammed Mustafa Bekiroglu</h1></p>
-        <p>Graduate from Marmara University Faculty of <em><strong>Theology</strong></em></p>
-        <p>Master’s Student at Ibn Haldun University Faculty of Islamic Studies</p>
-        <p>Candidate Army Chaplain and Software Development in Test Engineer</p></td>
-    </tr>
-  </table>
+  <div class="div1">
+    <table cellspacing="20">
+      <tr>
+        <td class="td"><img class="img" src="Mustafa.png" width="200px" alt=""></td>
+        <td>
+          <p>
+          <h1 class="name">Muhammed Mustafa Bekiroglu</h1>
+          </p>
+          <p>Graduate from Marmara University Faculty of <span><em><strong>Theology</strong></em></span></p>
+          <p>Master’s Student at Ibn Haldun University Faculty of Islamic Studies</p>
+          <p>Candidate Army Chaplain and Software Development in Test Engineer</p>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <hr class="Edu">
+  <Center>
+    <div class="div2">
+      <h3>Education</h3>
+      <table id="education" border="2" cellspacing="3">
+        <thead>
+          <tr>
+            <th>Years</th>
+            <th>Institute</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>2008-2012</td>
+          <td>Graduated from Midwood Highschool in Brooklyn, New York</td>
+        </tr>
+        <tr>
+          <td>2012-2018</td>
+          <td>Graduated from Marmara University Faculty of Theology</td>
+        </tr>
+        <tr>
+          <td>2020-Present</td>
+          <td>Studying Master's at Ibn Haldun University on Islamic Sciences</td>
+        </tr>
+      </table>
+    </div>
+    <hr class="Work">
+    <div class="div3">
+      <h3>Work Experience</h3>
+      <table id="WorkExp" border="2" cellspacing="3">
+        <thead>
+          <tr>
+            <th>Years</th>
+            <th>Position</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2008</td>
+            <td>Tutored Students on Basic Islamic Teachings in Rochester, New York</td>
+          </tr>
+          <tr>
+            <td>2009</td>
+            <td>Tutored Students on Basic Islamic Teachings in Bristol, Pennsylvania</td>
+          </tr>
+          <tr>
+            <td>2010</td>
+            <td>Tutored Students on Basic Islamic Teachings in Newark, Delaware</td>
+          </tr>
+          <tr>
+            <td>2011</td>
+            <td>Tutored Students on Basic Islamic Teachings and served as an Imam in Clifton, New Jersey</td>
+          </tr>
+          <tr>
+            <td>2012</td>
+            <td>Tutored Students on Basic Islamic Teachings and managed an education center in Youngstown, Ohio</td>
+          </tr>
+          <tr>
+            <td>2012</td>
+            <td>Actor for the SunDance film festival award-winning film “Black Balloon</td>
+          </tr>
+          <tr>
+            <td>2014</td>
+            <td>Worked and attracted many customers for İKSARA</td>
+          </tr>
+          <tr>
+            <td>2012-2015</td>
+            <td>Tourist Guide and Presenter about the Blue Mosque and Turkey at The Center for Cross-Cultural Communication in Istanbul, Turkey</td>
+          </tr>
+          <tr>
+            <td>2015-2016</td>
+            <td>Private Native English Teacher for the CEO of the logistic firm Köprü Group in Istanbul, Turkey</td>
+          </tr>
+          <tr>
+            <td>2016</td>
+            <td>Employed several Europeans with Prof. Dr. Kemal AYDIN to manage governmental projects, specifically the project in Lanham, Maryland known as the Diyanet Center of America</td>
+          </tr>
+          <tr>
+            <td>2016-Present</td>
+            <td>Private Native English Teacher for a Lawyer in Istanbul, Turkey</td>
+          </tr>
+          <tr>
+            <td>2016-2018</td>
+            <td>Representative for Wafid Institution in Istanbul, Turkey</td>
+          </tr>
+          <tr>
+            <td>2017</td>
+            <td>Simultaneous translator and improved negotiations between İMKA and Japanese businessmen</td>
+          </tr>
+          <tr>
+            <td>2017</td>
+            <td>Translated a book from Turkish to English written by Prof. Dr. Kemal YILDIZ</td>
+          </tr>
+          <tr>
+            <td>2018</td>
+            <td>Simultaneous translator for Emsey Hospital Esthetic Hair Transplant</td>
+          <tr>
+            <td>2018</td>
+            <td>Simultaneous translator for Özel Kaş Hospital Esthetic Hair Transplant</td>
+          </tr>
+          <tr>
+            <td>2019-Present</td>
+            <td>Worked with Uber, Lyft, Amazon Flex, Doordash, Grubhub, Postmates, Instacart, and Shipt</td>
+          </tr>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <hr class="Course">
+    <div class="div4">
+      <h3>Short Courses Attended</h3>
+      <table id="ShortCA" border="2" cellspacing="3">
+        <thead>
+          <th>Years</th>
+          <th>Course</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>November, 2014</td>
+            <td>Participant in workshop courses by Fadel Soliman, Founder of Bridges Foundation (Istanbul, Turkey)</td>
+          </tr>
+          <tr>
+            <td>August, 2015</td>
+            <td>Participant in the Congress of the International Association for the Psychology of Religion (Istanbul, Turkey)</td>
+          </tr>
+          <tr>
+            <td>February-June, 2016</td>
+            <td>Certificate of Success in Zerka University (Zerka, Jordan)</td>
+          </tr>
+          <tr>
+            <td>March, 2016</td>
+            <td>Participant of Congress in the International Hadeeth Association (Mafraq, Jordan)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <hr class="Language">
+    <div class="div5">
+      <h3>Languages</h3>
+      <table id="Languages" border="2" cellspacing="3">
+        <thead>
+          <tr>
+            <th>Language</th>
+            <th>Proficiency</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>English</td>
+            <td>Advanced</td>
+          </tr>
+          <tr>
+            <td>Turkish</td>
+            <td>Advanced</td>
+          </tr>
+          <tr>
+            <td>Arabic</td>
+            <td>Advanced</td>
+          </tr>
+          <tr>
+            <td>Spanish</td>
+            <td>Beginner</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </Center>
+  <hr class="Countries">
+  <div class="div6">
+    <Center>
+      <h3>Countries Visited</h3>
+    </Center>
+  <table>
+   <tr>
+    <td>
+    <script src="https://www.amcharts.com/lib/3/ammap.js" type="text/javascript"></script>
+    <script src="https://www.amcharts.com/lib/3/maps/js/worldHigh.js" type="text/javascript"></script>
+    <script src="https://www.amcharts.com/lib/3/themes/dark.js" type="text/javascript"></script>
+    <div id="mapdiv" style="width: 800px; height: 700px; z-index: 0;"></div>
+    <script type="text/javascript">
+      var map = AmCharts.makeChart("mapdiv", {
+        type: "map",
+        theme: "dark",
+        projection: "mercator",
+        panEventsEnabled: true,
+        backgroundColor: "#535364",
+        backgroundAlpha: 1,
+        zoomControl: {
+          zoomControlEnabled: true
+        },
+        dataProvider: {
+          map: "worldHigh",
+          getAreasFromMap: true,
+          areas: [{
+              "id": "AL",
+              "showAsSelected": true
+            },
+            {
+              "id": "BE",
+              "showAsSelected": true
+            },
+            {
+              "id": "BA",
+              "showAsSelected": true
+            },
+            {
+              "id": "FR",
+              "showAsSelected": true
+            },
+            {
+              "id": "DE",
+              "showAsSelected": true
+            },
+            {
+              "id": "GR",
+              "showAsSelected": true
+            },
+            {
+              "id": "HU",
+              "showAsSelected": true
+            },
+            {
+              "id": "IT",
+              "showAsSelected": true
+            },
+            {
+              "id": "XK",
+              "showAsSelected": true
+            },
+            {
+              "id": "ME",
+              "showAsSelected": true
+            },
+            {
+              "id": "NL",
+              "showAsSelected": true
+            },
+            {
+              "id": "MK",
+              "showAsSelected": true
+            },
+            {
+              "id": "ES",
+              "showAsSelected": true
+            },
+            {
+              "id": "TR",
+              "showAsSelected": true
+            },
+            {
+              "id": "UA",
+              "showAsSelected": true
+            },
+            {
+              "id": "US",
+              "showAsSelected": true
+            },
+            {
+              "id": "EG",
+              "showAsSelected": true
+            },
+            {
+              "id": "TN",
+              "showAsSelected": true
+            },
+            {
+              "id": "IR",
+              "showAsSelected": true
+            },
+            {
+              "id": "IL",
+              "showAsSelected": true
+            },
+            {
+              "id": "JO",
+              "showAsSelected": true
+            },
+            {
+              "id": "PS",
+              "showAsSelected": true
+            },
+            {
+              "id": "SA",
+              "showAsSelected": true
+            }
+          ]
+        },
+        areasSettings: {
+          autoZoom: true,
+          color: "#B4B4B7",
+          colorSolid: " #85F4FF",
+          selectedColor: "#85F4FF",
+          outlineColor: "#666666",
+          rollOverColor: "#85F4FF",
+          rollOverOutlineColor: "#000000"
+        }
+      });
+    </script>
+  </td>
+        <td>
+          <p>
+            <ol>
+              <li>United States</li>
+              <li>Holland
+              <ol>
+                <li>Amsterdam</li>
+                <li>Rotterdam</li>
+                <li>Utrecht</li>
+              </ol></li>
+              <li>Germany
+              <ol>
+                <li>Dusseldorf</li>
+                <li>Cologne</li>
+                <li>Frankfurt</li>
+              </ol></li>
+              <li>France
+              <ol>
+                <li>Paris</li>
+              </ol></li>
+              <li>Belgium
+              <ol>
+                <li>Brussels</li>
+              </ol></li>
+              <li>Turkey</li>
+              <li>Jordan
+              <ol>
+                <li>Amman</li>
+                <li>Kerak</li>
+                <li>Petra</li>
+                <li>Wadi Rum</li>
+                <li>Aqaba</li>
+                <li>Ma'an</li>
+              </ol></li>
+              <li>Palestine
+              <ol>
+                <li>Quds</li>
+                <li>Yafo</li>
+                <li>Hebron</li>
+              </ol></li>
+              <li>Saudi Arabia
+              <ol>
+                <li>Tabuk</li>
+                <li>Madina</li>
+                <li>Mecca</li>
+              </ol></li>
+              <li>Iran
+              <ol>
+                <li>Isfahan</li>
+                <li>Tehran</li>
+                <li>Mashhad</li>
+                <li>Shiraz</li>
+              </ol></li>
+              <li>Greece
+              <ol>
+                <li>Thessaloniki</li>
+              </ol></li>
+            </ol>
+          </p>
+        </td>
+        <td>
+          <p>
+            <ol start="12">
+              <li>Hungary
+              <ol>
+                <li>Budapest</li>
+              </ol></li>
+              <li>Italy
+              <ol>
+                <li>Milan</li>
+                <li>Bologne</li>
+                <li>Venice</li>
+              </ol></li>
+              <li>Spain
+              <ol>
+                <li>Valencia</li>
+                <li>Granada</li>
+                <li>Madrid</li>
+                <li>Barcelona</li>
+              </ol></li>
+              <li>Bosnia
+              <ol>
+                <li>Sarayevo</li>
+                <li>Mostar</li>
+                <li>Blagaj</li>
+                <li>Pocitelj</li>
+              </ol></li>
+              <li>Montenegro
+              <ol>
+                <li>Kotor</li>
+                <li>Budva</li>
+              </ol></li>
+              <li>Albania
+              <ol>
+                <li>Tirana</li>
+                <li>Shkoder</li>
+              </ol></li>
+              <li>Macedonia
+              <ol>
+                <li>Skopje</li>
+                <li>Matka</li>
+                <li>Ohrid</li>
+              </ol></li>
+              <li>Kosovo
+              <ol>
+                <li>Pristina</li>
+              </ol></li>
+              <li>Tunisia
+              <ol>
+                <li>Tunis</li>
+                <li>Cartage</li>
+                <li>El Jem</li>
+                <li>Kairouan</li>
+                <li>Monastir</li>
+                <li>Sousse</li>
+                <li>Hammamet</li>
+              </ol></li>
+              <li>Ukraine
+              <ol>
+                <li>Kiev</li>
+              </ol></li>
+              <li>Egypt
+              <ol>
+                <li>Cairo</li>
+              </ol></li>
+            </ol>
+          </p>
+        </td>
+      </tr>
+     </table>
+  </div>
+  <p><a href="Contact.html">Click Here</a> to fill out a contact form</p>
 </body>
-<hr noshade size="3" color="blue">
-<Center><h3>Education</h3>
-<table border="2" cellspacing="3">
-  <thead>
-    <tr>
-      <th>Years</th>
-      <th>Institute</th>
-    </tr>
-  </thead>
-  <tr>
-    <td>2008-2012</td>
-    <td>Graduated from Midwood Highschool in Brooklyn, New York</td>
-  </tr>
-  <tr>
-    <td>2012-2018</td>
-    <td>Graduated from Marmara University Faculty of Theology</td>
-  </tr>
-  <tr>
-    <td>2020-Present</td>
-    <td>Studying Master's at Ibn Haldun University on Islamic Sciences</td>
-  </tr>
-</table>
-<hr noshade size="3" color="red">
-<h3>Work Experience</h3>
-<table border="2" cellspacing="3">
-<thead>
-  <tr>
-    <th>Years</th>
-    <th>Position</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>2008</td>
-    <td>Tutored Students on Basic Islamic Teachings in Rochester, New York</td>
-  </tr>
-  <tr>
-    <td>2009</td>
-    <td>Tutored Students on Basic Islamic Teachings in Bristol, Pennsylvania</td>
-  </tr>
-  <tr>
-    <td>2010</td>
-    <td>Tutored Students on Basic Islamic Teachings in Newark, Delaware</td>
-  </tr>
-  <tr>
-    <td>2011</td>
-    <td>Tutored Students on Basic Islamic Teachings and served as an Imam in Clifton, New Jersey</td>
-  </tr>
-  <tr>
-    <td>2012</td>
-    <td>Tutored Students on Basic Islamic Teachings and managed an education center in Youngstown, Ohio</td>
-  </tr>
-  <tr>
-    <td>2012</td>
-    <td>Actor for the SunDance film festival award-winning film “Black Balloon</td>
-  </tr>
-  <tr>
-    <td>2014</td>
-    <td>Worked and attracted many customers for İKSARA</td>
-  </tr>
-  <tr>
-    <td>2012-2015</td>
-    <td>Tourist Guide and Presenter about the Blue Mosque and Turkey at The Center for Cross-Cultural Communication in Istanbul, Turkey</td>
-  </tr>
-  <tr>
-    <td>2015-2016</td>
-    <td>Private Native English Teacher for the CEO of the logistic firm Köprü Group in Istanbul, Turkey</td>
-  </tr>
-  <tr>
-    <td>2016</td>
-    <td>Employed several Europeans with Prof. Dr. Kemal AYDIN to manage governmental projects, specifically the project in Lanham, Maryland known as the Diyanet Center of America</td>
-  </tr>
-  <tr>
-    <td>2016-Present</td>
-    <td>Private Native English Teacher for a Lawyer in Istanbul, Turkey</td>
-  </tr>
-  <tr>
-    <td>2016-2018</td>
-    <td>Representative for Wafid Institution in Istanbul, Turkey</td>
-  </tr>
-  <tr>
-    <td>2017</td>
-    <td>Simultaneous translator and improved negotiations between İMKA and Japanese businessmen</td>
-  </tr>
-  <tr>
-    <td>2017</td>
-    <td>Translated a book from Turkish to English written by Prof. Dr. Kemal YILDIZ</td>
-  </tr>
-  <tr>
-    <td>2018</td>
-    <td>Simultaneous translator for Emsey Hospital Esthetic Hair Transplant</td>
-    <tr>
-      <td>2018</td>
-      <td>Simultaneous translator for Özel Kaş Hospital Esthetic Hair Transplant</td>
-    </tr>
-    <tr>
-      <td>2019-Present</td>
-      <td>Worked with Uber, Lyft, Amazon Flex, Doordash, Grubhub, Postmates, Instacart, and Shipt</td>
-    </tr>
-  </tr>
-</tbody>
-</table>
-<hr noshade size="3" color="green">
-<h3>Short Courses Attended</h3>
-<table border="2" cellspacing="3">
-  <thead>
-    <th>Years</th>
-    <th>Course</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td>November, 2014</td>
-      <td>Participant in workshop courses by Fadel Soliman, Founder of Bridges Foundation (Istanbul, Turkey)</td>
-    </tr>
-    <tr>
-      <td>August, 2015</td>
-      <td>Participant in the Congress of the International Association for the Psychology of Religion (Istanbul, Turkey)</td>
-    </tr>
-    <tr>
-      <td>February-June, 2016</td>
-      <td>Certificate of Success in Zerka University (Zerka, Jordan)</td>
-    </tr>
-    <tr>
-      <td>March, 2016</td>
-      <td>Participant of Congress in the International Hadeeth Association (Mafraq, Jordan)</td>
-    </tr>
-  </tbody>
-</table>
-<hr noshade size="3" color="purple">
-<h3>Languages</h3>
-<table border="2" cellspacing="3">
-  <thead>
-    <tr>
-      <th>Language</th>
-      <th>Proficiency</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>English</td>
-      <td>Advanced</td>
-    </tr>
-    <tr>
-      <td>Turkish</td>
-      <td>Advanced</td>
-    </tr>
-    <tr>
-      <td>Arabic</td>
-      <td>Advanced</td>
-    </tr>
-    <tr>
-      <td>Spanish</td>
-      <td>Beginner</td>
-    </tr>
-  </tbody>
-</table></Center>  
-<h3>Countries Visited</h3>
-<ul>
-  <li>Holland</li>
-  <li>Germany</li>
-  <li>France</li>
-  <li>Belgium</li>
-  <li>Turkey</li>
-  <li>Jordan</li>
-  <li>Palestine</li>
-  <li>Saudi Arabia</li>
-  <li>Iran</li>
-  <li>Greece</li>
-  <li>Hungary</li>
-  <li>Italy</li>
-  <li>Spain</li>
-  <li>Bosnia</li>
-  <li>Montenegro</li>
-  <li>Albania</li>
-  <li>Macedonia</li>
-  <li>Kosovo</li>
-  <li>Tunisia</li>
-  <li>Ukraine</li>
-  <li>Egypt</li>
-</ul>
-<p><a href="Contact.html">Click Here</a> to fill out a contact form</p>
+
 </html>

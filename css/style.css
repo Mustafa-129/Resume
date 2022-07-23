@@ -1,0 +1,146 @@
+/*This is how you comment in CSS*/
+/********************Tag Selectors****************/
+body{
+  background-color: #FFB4B4;
+  font-family: 'Montserrat', sans-serif;
+  /*****font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family changes the font of texts and the 4 fonts you see is actually an order you want
+  basically we're saying it should be Helvetica Neue if the pc doesnt have this font style installed
+  then let it be helvetica if not then arial if not then sans serif. Not all fonts are installed in
+  all systems to check this out go to https://www.cssfontstack.com/ or if you want a font and no other
+  font but that then you can embed a font from fonts.google.com which is the best if you ask me because
+  you not only copy paste the css code but also a <link> and paste that where all the other links are in
+  the html and when the user enters the site it fetches the font from that link!!! (i applied custom
+  fonts using this method in body and h1)********/
+}
+span{
+  text-decoration: underline;
+}
+/*******Span can be used on a few letters of the word as well not only on the whole word*******/
+hr {
+   border-color: grey;
+   border-style: none;
+   border-top-style: dotted;
+   border-width: 5px;
+   width: 10%;
+}
+h1 {
+  font-family: 'Sacramento', cursive;
+  color: #2155CD;
+}
+h3 {
+  color: #2155CD
+}
+/********************Class Selectors*************/
+.otto1{
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+.otto2{
+  position: fixed;
+  z-index: -1;
+  right: 0;
+  top: 0;
+}
+.flag{
+  height: 400px;
+  width: 500px;
+  position: fixed;
+  z-index: -1; /**********z-index determines its place on the z axis*********/
+  margin: 0 380px;
+  bottom: 0;
+}
+.name:hover{color: black;}
+.img:hover{
+  border-radius: 100%;
+}
+/*why isnt it a full circle?*/
+.td{background-color: black;
+}
+.Edu{
+  background-color: red;
+}
+.Work{
+  background-color: Blue;
+}
+.Course{
+  background-color: green;
+}
+.Language{
+  background-color: Yellow;
+}
+.Countries{
+  background-color: Purple;
+}
+.div1{
+  background-color: #85F4FF;
+  border: solid;
+  border-width: 5px;
+  padding: 15px;
+  margin: 25px 230px;
+}
+.div2{
+  background-color: #85F4FF;
+  border: solid;
+  border-width: 5px;
+  padding: 15px;
+  margin: 25px 335px;
+}
+.div3{
+  background-color: #85F4FF;
+  border: solid;
+  border-width: 5px;
+  padding: 15px;
+  margin: 10px;
+}
+.div4{
+  background-color: #85F4FF;
+  border: solid;
+  border-width: 5px;
+  padding: 15px;
+  margin: 25px 175px;
+}
+.div5{
+  background-color: #85F4FF;
+  border: solid;
+  border-width: 5px;
+  padding: 15px;
+  margin: 25px 500px;
+}
+.div6{
+  background-color: #85F4FF;
+  border: solid;
+  border-width: 5px;
+  padding: 15px;
+  margin: 25px 45px;
+}
+/********************ID Selectors*************/
+/*find out why its giving an error here- its cuz it doesnt want you using ID as a selector*/
+#education{
+  background-color: #FFF9CA;
+}
+#education:hover{
+  background-color: green;
+}
+#WorkExp{
+  background-color: #E2D784;
+}
+#ShortCA{
+  background-color: #CDDEFF;
+}
+#Languages{
+  background-color: #F8F0DF;
+}
+#mapdiv{
+  position: relative;
+  bottom: 25px;
+}
+/*****the position of things is by default static but to move them around we need to first change it
+to relative then we can say stuff like top, bottom, left or right and say the amount we want it to
+move. For example: bottom:25px; means push it from the bottom by 25px meaning we moved it up. Just
+like this we put the opposite direction to move it the way we want***********/
+/*****Theres also position: absolute; when theres on image on another and you make its position
+absolute this time when you say right: 20px; it shifts all the way to the right and leaves a 20px
+distance from the right border of the image its on which is usually a div*******/
